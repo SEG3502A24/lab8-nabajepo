@@ -1,0 +1,26 @@
+<a class="btn btn-primary" [routerLink]="['/employee']">Add Employee</a>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Date of birth</th>
+      <th scope="col">City</th>
+      <th scope="col">Salary</th>
+      <th scope="col">Gender</th>
+      <th scope="col">Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.nameEmployee}}</td>
+      <td>{{emp.dateBirthEmployee| date :'d/MMM/y'}}</td>
+      <td>{{emp.cityEmployee}}</td>
+      <td>{{emp.salaryEmployee}}</td>
+      <td>{{emp.genderEmployee}}</td>
+      <td>{{emp.emailEmployee}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<h1>{{loading}}</h1>
